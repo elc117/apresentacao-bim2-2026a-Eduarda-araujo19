@@ -60,5 +60,65 @@ class AnotherThreadRace {
 }
 ````
 
+### Compilação e Execução:
+obs.: Diminui a distância da corrida( pos = 4) para melhor visualização.
+![gif](pratica_02.gif)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Exercício 3 : BetterThreadRace
+
+
+Para a construção da super-classe AnimalRuuner, eu utilizei o "implements Runnable" pois o uso de "extends Thread" geraria uma herança múltipla, algo que não é permitido em java:
+
+````java
+class AnimalRunner implements Runnable{
+````
+
+Após isso adicionei o atributo ````name```` que era comum entre os animais da corrida.Além disso, adicionei um novo atributo ````velocity````:
+ ````java
+    protected String name;
+	protected String velocity;
+````
+
+Criei o método runlike() , agora com o atributo da velocidade do animal:
+````java
+protected void runLike(){
+        System.out.println(name + " is running " + velocity);
+    }
+````
+
+Alterei também o método run() , tornando-o mais génerico:
+````java
+public void run() {
+		for (int pos = 4; pos > 0; pos--) {
+			runLike();
+			System.out.println(name + " is at position " + pos);
+		}
+	}
+````
+
+Para as classes dos animais apenas modifiquei as mensagens de inicio e fim da corrida:
+
+````java
+class Rabbit extends AnimalRunner {
+
+	public Rabbit(String name,String velocity){
+		super(name,velocity);
+	}
+	
+	@Override
+	public void run() {
+		System.out.println(name + " rabbit is at the start of the race!");
+		super.run();
+		System.out.println(name + " rabbit finished the race!");
+	}
+}
+````
+### Compilação e Execução:
+
+
+
+
+
 
 
