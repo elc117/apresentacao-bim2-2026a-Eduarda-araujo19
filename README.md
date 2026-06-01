@@ -116,6 +116,15 @@ class Rabbit extends AnimalRunner {
 ````
 ### Compilação e Execução:
 
+![gif](pratica_3.gif)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Referências:
+
+https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2026a/main/classes/26/README.md#1
+
+https://youtu.be/Vd6nOALCYCc?si=aBb295MaKGy8k4Wj
+
 
 
 
